@@ -1,0 +1,4 @@
+* /* kehtib kõigi html-elementide jaoks */
+{
+ margin: 0; /* html-elemendi kaugus teistest elementidest - antud juhul 0 pikslit, st elementi ei eraldata teistest elementidest */
+}
