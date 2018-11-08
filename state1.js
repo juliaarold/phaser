@@ -1,14 +1,22 @@
-demo.state1=function (){};
-demo.state1.prototype = {
-	preload: function () {
-
-	},
-	create: function () {
-		console.log('state1');
-		game.stage.backgroundColor="#F3D303";
-		addkeyCallback(Phaser.Keyboard.TWO,changeState,0); // pöördumine funktsiooni 'addkeyCallback' poole (read 21-23 failis 'state0.js'), mille tulemusena, kui klaviatuuril vajutatakse klahvile, millel on nr 2, muudetakse funktsiooni 'changeState' abil (read 17-19 failis 'state0.js') mängufaasiks 'state0' 
-		},
-	update: function () {
-		
-	}
-};
+var rohi, kivid;
+demo.state1=function(){};
+demo.state1.prototype={
+    preload: function(){
+        game.load.tilemap('aluskaart','aluskaart.json',null,Phaser.Tilemap.TILED_JSON); // kaardi laadimine failist 'aluskaart.json', nimeks saab 'aluskaart'
+        game.load.image('rohi','rohi.png'); // kaardikastide 'rohi' laadimine failist 'rohi.png'
+        game.load.image('kivid','kivid.png'); // kaardikastide 'kivid' laadimine failist 'kivid.png'
+    },
+    create: function(){
+        console.log('state1');
+        game.stage.backgroundColor="#F3D3D3";
+        addkeyCallback(Phaser.Keyboard.ZERO,changeState,0);
+        var map=game.add.tilemap('aluskaart'); // kaardi lisamine, kasutades 'aluskaarti'
+        map.addTilesetImage('rohi'); // kaardikastide hulga 'rohi' lisamine
+        map.addTilesetImage('kivid'); // kaardikastide hulga 'kivid' lisamine
+        rohi=map.createLayer('rohi'); // kihi 'rohi' tekitamine 
+        kivid=map.createLayer('kivid'); // kihi 'kivid' tekitamine
+    },
+    update: function(){
+        
+    }
+}
