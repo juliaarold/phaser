@@ -1,4 +1,4 @@
-var rohi, kivid;
+var rohi, kivid; // defineerime muutujad 'rohi' ja 'kivid'
 demo.state1=function(){};
 demo.state1.prototype={
     preload: function(){
