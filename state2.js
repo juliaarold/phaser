@@ -9,6 +9,7 @@ demo.state2.prototype = {
 	},
 	create: function () {
 		game.stage.backgroundColor = '#40ff00';
+		addChangeStateEventListeners(); 
 		addkeyCallback(Phaser.Keyboard.THREE,changeState,0);
 		alus=game.add.sprite(centerX,centerY,'alus'); // laskepuldi alus pannakse meie mänguala keskele
 		alus.anchor.setTo(0.5); // kuna joonistama hakatakse mänguala keskpunktist, siis tuleb meil alust veidi nihutada - pool tema laiusest ja pool tema kõrgusest
@@ -27,7 +28,7 @@ demo.state2.prototype = {
 
 		toru=game.add.sprite(centerX,centerY,'toru'); // lisame laskepuldi toru mänguala keskele
 		toru.anchor.setTo(0.1,0.6); // nihutame laskepuldi toru veidi vasakule ja natuke rohkem üles
-		toru.scale.setTo(1.5,0.75); // muudane laskepuldi toru mõõtmeid
+		toru.scale.setTo(1.5,0.75); // muudame laskepuldi toru mõõtmeid
 
 		vaenlane=game.add.sprite(100,200,'vaenlane'); // lisame ühe vaenlase laskepuldist vasakule
 		vaenlane.scale.setTo(0.5); // muudame vaenlase poole väiksemaks
