@@ -65,6 +65,7 @@ function addChangeStateEventListeners(){ // jälgitakse klaviatuurivajutusi
 		addKeyCallback(Phaser.Keyboard.SIX, changeState, 6); // kui vajutatakse klaviatuuril klahvile 6, siis muudetakse aktiivseks mängufaas 6
 		addKeyCallback(Phaser.Keyboard.SEVEN, changeState, 7); // kui vajutatakse klaviatuuril klahvile 7, siis muudetakse aktiivseks mängufaas 7
 		addKeyCallback(Phaser.Keyboard.EIGHT, changeState, 8); // // kui vajutatakse klaviatuuril klahvile 8, siis muudetakse aktiivseks mängufaas 8
+		addKeyCallback(Phaser.Keyboard.NINE, changeState, 9); // // kui vajutatakse klaviatuuril klahvile 9, siis muudetakse aktiivseks mängufaas 9
 }
 
 function changeState(i, stateNum){ // funktsioon 'changeState' - soovitud mängufaasi aktiveerimiseks 
